@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.parent {
+    width: 68%;
+    height: 320px;
+}
+
+.slide1 {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 300px !important;
+    width: 300px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin-left: 40px;
+}
+
+.slide1 button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.slide1 button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+button:hover::before {
+    width: 0%;
+    height: 0%;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+.back-button {
+    background-color: #28a745;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #218838;
+}
+
+/* Style the slick dots */
+/* Style the slick dots */
+.slick-dots {
+    bottom: 10px; /* Position the dots */
+}
+
+.slick-dots li {
+    margin: 0 5px; /* Space between dots */
+}
+
+.slick-dots button {
+    background-color: white; /* Color of inactive dots */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+}
+
+.slick-dots .slick-active button {
+    background-color: #667eea; /* Color of active dot */
+}
+
+
+@media (max-width: 768px) {
+    .slide1 {
+        height: 250px;
+        width: 180px;
+    }
+
+    .slide1 button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide1 {
+        height: 200px;
+        width: 150px;
+    }
+
+    .slide1 button {
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

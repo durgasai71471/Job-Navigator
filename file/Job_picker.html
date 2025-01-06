@@ -1,0 +1,410 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="Job_picker.css"/> -->
+ <style>
+    body , html{
+    padding:0px;
+    margin: 0px;
+    overflow: hidden;
+    display: block;
+}
+.bg{
+    width:100%;
+    height:100vh;
+    height: auto;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("https://i.pinimg.com/736x/12/cc/61/12cc612303f425d915738b17a4c788e3.jpg"); */
+    background-color: rgb(28, 26, 26);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: none;
+}
+.prt {
+    width: 80%;
+    min-height: 100vh;
+    height: auto;
+    /* border: 2px solid black; */
+}
+.but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 5%;
+}
+.bt {
+    height: 100px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:70px;
+    width: 250px;
+    font-size: 25px;
+    background-color:#5f6769;
+    /* background-color:#402a23; */
+    color:black;
+    border-radius: 50px;
+    /* margin-top:0px; */
+    justify-content: space-around;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    overflow: hidden;
+}
+.butt {
+    /* margin-top: 60px; */
+    justify-content: space-evenly;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* gap: 100px; */
+    display: none;
+    /* width: 100%; */
+    /* height:; */
+}
+.buzz {
+    /* margin-top: 60px; */
+    justify-content: space-evenly;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* gap: 100px; */
+    display: none;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+.mdd {
+    display: block;
+    justify-content: space-evenly;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 100px;
+    /* justify-content: space-evenly; */
+    width: 100%;
+    height: calc(100% - 100px);
+}
+.mvv {
+    display: block;
+    justify-content: space-evenly;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 100px;
+    /* justify-content: space-evenly; */
+    width: 100%;
+    height: calc(100% - 100px);
+}
+button:hover{
+    box-shadow: 0 0 4px 4px grey; 
+    cursor: pointer;
+    transform: scale(1.05);
+    color:black;
+    background-color: white;
+    /* background-color: brown; */
+    transition: all 0.5s ease;
+}
+a{
+    text-decoration: none;
+    /* color:white; */
+    color: black;
+}
+button::before{     
+    content: "";
+        position: absolute;
+        width:100%;
+        height: 100%;
+        left:-100%;
+        background-color: white;
+        transition: all 0.5s linear;
+        z-index: -5;
+        border-radius: 50px;
+}
+button:hover::before{
+        left:0%;
+    }
+.left_but{
+    height:55svh;
+    width:20%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    background-color:white;
+    margin-right:5%;
+    margin-top: -5%;
+}
+.left_but:hover{
+    transform:scale(2s);
+}
+.right_but{
+    height:55svh;
+    width:20%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    background-color:white;
+    margin-top:15%;
+    margin-top:5%;
+}
+.bt img{
+    height:260px;
+    width: 100%;
+    padding:5%;
+    /* padding-top:9%; */
+}
+.bt2 img{
+    height:260px;
+    width:90%;
+    padding:5%;
+    padding-top:10%; 
+}
+.text{
+    font-style: oblique;
+    font-size: 20px;
+    margin-left:10%;
+}
+@media (max-width: 1200px) {
+    .left_but,
+    .right_but {
+        width: 30%;
+        margin-right: 2%;
+    }
+
+    .right_but {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 810px) {
+    .left_but,
+    .right_but {
+        width: 45%;
+        margin-right: 2%;
+    }
+    .right_but {
+        margin-top:15%;
+    }
+  
+    .body,html{
+        overflow: scroll;
+    }
+    .butt{
+        padding-top:42%;
+        /* padding-left:80%; */
+    }
+    .buzz{
+        padding-top:-80%;
+        /* padding-left:80%; */
+    }
+   
+}
+@media  screen and (max-width:650px) {
+    .right_but{
+        margin-top: 15%;
+    }
+    .bt2 button{
+        width: 200px;
+        margin-top:0%;
+        height: 50px;
+        /* background-color: black; */
+    }
+    .bt button{
+        width: 200px;
+        margin-top:0%;
+        height: 50px;
+        /* background-color: black; */
+    }
+    .bt img{
+        width:200px;
+    }
+    .bt2 img{
+        margin-top:4%;
+    }
+    .butt{
+        padding-left:10%;
+    }
+    .buzz{
+        margin-left:50%;
+    }
+    
+
+}
+@media (max-width: 480px) {
+    .left_but,
+    .right_but {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .right_but {
+        margin-top: 15%;
+    }
+}
+@media screen and (max-width:500px){
+    .bt img{
+        width: 155px;
+    }
+}
+.butt {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    width:0%;
+    height: calc(100% - 100px);
+    /* top:-10px;
+    right: 0%; */
+    margin-top:-45%;
+    transition: all 2s;
+}
+.buzz {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    width:0%;
+    height: calc(100% - 100px);
+    /* top:-10px; */
+    /* margin-top: -40%; */
+    right: 0%;
+    transition: all 2s;
+}
+.b1{
+    display: none;
+    background-color: #75b2f0;
+    width: 200px;
+    height: 60px;
+    font-family: oblique;
+    font-size: 16px;
+}
+.b{
+    display: none;
+    background-color: #75b2f0;
+    width: 200px;
+    height: 60px;
+    font-family: oblique;
+    font-size: 16px;
+}
+@media screen and (max-width:1250px) {
+    .body,html{
+        overflow: scroll;
+    }
+    .butt{
+        padding-top:45%;
+        /* padding-left:-40%; */
+        margin-left:30%;
+    }
+    .buzz{
+        margin-left: 30%;
+    }
+}
+
+ </style>
+</head>
+ <body>
+    <div class="bg">
+        <div class="prt">
+            <div class="but">
+                <div class="left_but">
+                    <p class="text">Explore the World with INTERNET & Get Into IT World</p>
+                    <div class="bt">
+                        <img  src="https://i.pinimg.com/564x/2b/16/40/2b1640a120aba1d949d31b6d262a1b26.jpg">
+                        <button onclick="fun()"style="margin-top:-10%; font-style: oblique;">IT</button>
+                </div>
+                    </div>
+                    <div class="right_but">
+                        <div class="bt2">
+                            <button onclick="fun1()" style="margin-top:-33%; font-style:oblique;">NON-IT</button>
+                            <img src="https://i.pinimg.com/564x/85/1b/d0/851bd04ddf6659b8a74a6b07364d94c4.jpg"/>
+                            <p class="text">Empowering Growth and Innovation Across Diverse,Industries</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="butt" id="kk">
+                <button onclick="fun2()" class="b"><a href="../file/softwaredevolper.html">Software Developer</a></button>
+                <!-- <button onclick="fun3()" class="b"><a href="" target="_blank">Web Developer</a></button> -->
+                <button onclick="fun4()" class="b"><a href="../file/frontend.html" >Front End Developer</a></button>
+                <button onclick="fun5()"class="b"><a href="../file/tester.html" >Tester</a></button>
+                <button onclick="fun6()"class="b"><a href="../file/dataengineer.html">Data Engineer</a></button>
+                <button onclick="fun7()"class="b"><a href="../file/dataanalyst.html">Data Analyst</a></button>
+                <button onclick="fun8()"class="b"><a href="../file/uiux.html" >UI/UX Designer</a></button>
+                <button onclick="fun9()"class="b"><a href="../file/cloudeng.html" >Cloud Engineer</a></button>
+                <button onclick="fun10()"class="b"><a href="../file/cybersec.html" >Cyber Security</a></button>
+            </div>
+            <div class="buzz" id="mm">
+                <button onclick="fun14()" class="b1"><a href="../file/Hr.html" >Hr recruiter</a></button>
+                <button onclick="fun15()" class="b1"><a href="../file/Marketing.html" >Marketing Executer</a></button>
+                <button onclick="fun16()" class="b1"><a href="/file/sales_excutive.html">Sales Executer</a></button>
+                <button onclick="fun17()" class="b1"><a href="/file/Banking.html">Banking</a></button>
+                <button onclick="fun18()" class="b1"><a href="../file/Associate.html">Associate analyst</a></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fun() {
+            var x = document.getElementById("kk");
+            x.style="display:block";
+            var y= document.getElementById("mm");
+            y.style = "display:none";
+            var z= document.getElementsByClassName("butt")[0];
+            z.style = "width:350px";
+            var z2=document.getElementsByClassName("buzz")[0];
+            z2.style="width:0px";
+             for(let j=0; j < 5; j++){
+                var b1 = document.getElementsByClassName('b1')[j];
+                b1.style = "display: none";
+            }
+            
+            for(let i=0; i < 9; i++){
+                var b = document.getElementsByClassName('b');
+                b[i].style = "display:block";
+                // b[i].style="margin-top:-10%";
+            }
+
+            var s = document.getElementsByClassName("left_but")[0];
+            s.style="margin-right:4%";
+            var s2 = document.getElementsByClassName("right_but")[0];
+            s2.style="margin-right:-60%";
+        }
+        function fun1() {
+            var x1 = document.getElementById("mm");
+            x1.style="display:block";
+            var y1= document.getElementById("kk");
+            y1.style = "display:none";
+            var z1= document.getElementsByClassName("buzz")[0];
+            z1.style = "width:350px";
+            var z3=document.getElementsByClassName("butt")[0];
+            z3.style="width:0px";
+            for(let j=0; j < 5; j++){
+                var b1 = document.getElementsByClassName('b1')[j];
+                b1.style = "display:block";
+            }
+            for(let i=0; i < 9; i++){
+                var b = document.getElementsByClassName('b');
+                b[i].style = "display:none";
+                // b[i].style="margin-top:-10%";
+            }
+        
+        }
+
+
+
+    </script>
+</body>
+</html>

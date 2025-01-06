@@ -1,0 +1,255 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(28, 26, 26);
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: none;
+        }
+        .prt {
+            width: 80%;
+            min-height: 100vh;
+        }
+        .but {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            margin-top: 5%;
+        }
+        .bt, .bt2 {
+            display: flex;
+            gap: 50px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .bt img, .bt2 img {
+            height: 260px;
+            width: 100%;
+            padding: 5%;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            width: 250px;
+            font-size: 25px;
+            background-color: #5f6769;
+            color: black;
+            border-radius: 50px;
+            justify-content: space-around;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        button:hover {
+            box-shadow: 0 0 4px 4px grey; 
+            cursor: pointer;
+            transform: scale(1.05);
+            background-color: white;
+            transition: all 0.5s ease;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .left_but, .right_but {
+            height: 55svh;
+            width: 20%;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .left_but {
+            margin-right: 5%;
+            margin-top: -5%;
+        }
+        .right_but {
+            margin-top: 5%;
+        }
+        .text {
+            font-style: oblique;
+            font-size: 20px;
+            margin-left: 10%;
+        }
+        .butt, .buzz {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 0;
+            height: calc(100% - 100px);
+            transition: all 2s;
+            display: none;
+        }
+        .b, .b1 {
+            background-color: rgb(226, 226, 141);
+            width: 200px;
+            height: 60px;
+            font-family: oblique;
+            font-size: 16px;
+            display: none;
+        }
+        .show {
+            display: block !important;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .left_but, .right_but {
+                width: 30%;
+                margin-right: 2%;
+            }
+            .right_but {
+                margin-top: 10%;
+            }
+        }
+
+        @media screen and (max-width: 810px) {
+            .left_but, .right_but {
+                width: 45%;
+                margin-right: 2%;
+            }
+            .right_but {
+                margin-top: 15%;
+            }
+            .bg {
+                background-color: red;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .bg {
+                background-color: yellow;
+            }
+            .bt img {
+                width: 163px;
+            }
+            .bt button, .bt2 button {
+                width: 200px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .left_but, .right_but {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+            }
+            .right_but {
+                margin-top: 15%;
+            }
+            .bt img, .bt2 img {
+                width: 100%;
+                padding: 5%;
+            }
+            button {
+                width: 100%;
+                height: auto;
+                font-size: 20px;
+            }
+        }
+
+        /* Ensure buttons are below images in responsive design */
+        @media screen and (max-width: 768px) {
+            .butt, .buzz {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+            .bt img, .bt2 img {
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="prt">
+            <div class="but">
+                <div class="left_but">
+                    <p class="text">Explore the World with INTERNET & Get Into IT World</p>
+                    <div class="bt">
+                        <img src="https://i.pinimg.com/564x/2b/16/40/2b1640a120aba1d949d31b6d262a1b26.jpg">
+                        <button onclick="fun()" style="margin-top: -10%; font-style: oblique;">IT</button>
+                    </div>
+                </div>
+                <div class="right_but">
+                    <div class="bt2">
+                        <button onclick="fun1()" style="margin-top: -33%; font-style: oblique;">NON-IT</button>
+                        <img src="https://i.pinimg.com/564x/85/1b/d0/851bd04ddf6659b8a74a6b07364d94c4.jpg">
+                        <p class="text">Empowering Growth and Innovation Across Diverse Industries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="butt" id="kk">
+                <button onclick="fun2()" class="b"><a href="http://127.0.0.1:5500/softwaredevolper.html" target="_blank">Software Developer</a></button>
+                <button onclick="fun4()" class="b"><a href="http://127.0.0.1:5500/frontend.html" target="_blank">Front End Developer</a></button>
+                <button onclick="fun5()" class="b"><a href="http://127.0.0.1:5500/tester.html" target="_blank">Tester</a></button>
+                <button onclick="fun6()" class="b"><a href="http://127.0.0.1:5500/dataengineer.html" target="_blank">Data Engineer</a></button>
+                <button onclick="fun7()" class="b"><a href="http://127.0.0.1:5500/data_analyst.html" target="_blank">Data Analyst</a></button>
+                <button onclick="fun8()" class="b"><a href="http://127.0.0.1:5500/uiux.html" target="_blank">UI/UX Designer</a></button>
+                <button onclick="fun9()" class="b"><a href="http://127.0.0.1:5500/cloudeng.html" target="_blank">Cloud Engineer</a></button>
+                <button onclick="fun10()" class="b"><a href="http://127.0.0.1:5500/cybersec.html" target="_blank">Cyber Security</a></button>
+            </div>
+            <div class="buzz" id="mm">
+                <button onclick="fun14()" class="b1"><a href="http://127.0.0.1:3000/Hr.html" target="_blank">HR Recruiter</a></button>
+                <button onclick="fun15()" class="b1"><a href="http://127.0.0.1:3000/Marketing.html" target="_blank">Marketing Executive</a></button>
+                <button onclick="fun16()" class="b1"><a href="http://127.0.0.1:3000/sales_excutive.html" target="_blank">Sales Executive</a></button>
+                <button onclick="fun17()" class="b1"><a href="http://127.0.0.1:3000/Banking.html" target="_blank">Banking</a></button>
+                <button onclick="fun18()" class="b1"><a href="http://127.0.0.1:3000/Associate.html" target="_blank">Associate Analyst</a></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fun() {
+            var x = document.getElementById("kk");
+            var y = document.getElementById("mm");
+            x.style.display = "block";
+            y.style.display = "none";
+            setTimeout(function() {
+                x.classList.add("show");
+            }, 100);
+        }
+        function fun1() {
+            var x = document.getElementById("mm");
+            var y = document.getElementById("kk");
+            x.style.display = "block";
+            y.style.display = "none";
+            setTimeout(function() {
+                x.classList.add("show");
+            }, 100);
+        }
+        function fun2() {
+            var x = document.getElementById("kk");
+            x.style.display = "block";
+            setTimeout(function() {
+                x.classList.add("show");
+            }, 100);
+        }
+        function fun14() {
+            var x = document.getElementById("mm");
+            x.style.display = "block";
+            setTimeout(function() {
+                x.classList.add("show");
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.Main_div {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  font-family: oblique;
+  font-style: italic;
+  /* overflow: scroll; */
+}
+/* .Main_buttons {
+  min-height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+} */
+ .select-main_parent{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ }
+.Par_select {
+  height: 60%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+.search-icon {
+  width: 80px;
+  height: 80px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-icon i {
+  font-size: 27px;
+}
+.logo-icon {
+  width: 80px;
+  height: 80px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-icon img {
+  height: 50px;
+  width: 80px;
+}
+select, option {
+  appearance: none;
+  border: none;
+  color: white;
+}
+option{
+
+}
+.select-div {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: oblique;
+  font-style: italic;
+ 
+}
+.select_box {
+  border: none;
+  height: 60%;
+  width: 100%;
+   background-color: #5f6769;
+}
+select {
+border: none;
+  font-size: 22px;
+  font-weight: bold;
+  outline: none;
+  font-family: oblique;
+  font-style: italic;
+}
+option {
+  border: none;
+  text-align: center;
+  font-size: 17px;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+  background-color: #5f6769;
+  font-family: oblique;
+  font-style: italic;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  /* margin-top: 50px; */
+  justify-content: space-around;
+}
+button:hover {
+  /* box-shadow: 0 0 4px 4px grey; */
+  /* background-color: rgb(188, 241, 243); */
+  background-color: rgb(24, 22, 22);
+  cursor: pointer;
+}
+.icons,.jobskills,.qualification{
+  color: rgb(212, 202, 202);
+}
+.icons i{
+  color: white;
+}
+.body_buttons {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.buttons_IT {
+  height: 85%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #5f6769;
+  border-radius: 10px;
+  /* display: none; */
+  position: absolute;
+  left: -300px;
+  width: 0%;
+  transition: all 2s ease;
+}
+.buttons_NON_IT {
+  height: 85%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #5f6769;
+  border-radius: 10px;
+  /* display: none; */
+  position: absolute;
+  left: -300px;
+  width: 0%;
+  transition: all 2s ease;
+}
+.roleHolder {
+  width: 70%;
+  height: 100%;
+}
+/* .ele div {
+  max-width: 80%;
+} */
+.full_stack,
+.back_end,
+.front_end,
+.tester,
+.cloud_eng,
+.manager,
+.hr_rec,
+.Marketing_exec,
+.banking,
+.sales_exec,
+.assoc_analyst {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  color: rgb(99, 93, 93);
+  display: none;
+}
+.ele {
+  border-radius: 20px;
+  height: 25%;
+  padding: 10px 60px 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  position: relative;
+  left: 30%;
+}
+
+.ele div {
+  margin-bottom: 3px;
+}
+.ele:hover {
+  box-shadow: 0 0 4px 4px #5f6769;
+  cursor: pointer;
+}
+.btn_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_div button {
+  height: 30px;
+  width: 100px;
+  background-color: #556165;
+  border: none;
+  box-shadow: none;
+}
+.btn_div button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 18px;
+}
+.roleName {
+  color: rgb(239, 233, 233);
+  font-size: 19px;
+  font-weight: 600;
+}
+.compName {
+  color: rgb(239, 228, 228);
+  font-size: 18px;
+}
+i {
+  color: black;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .Par_select{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Par_select{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ele {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    position: relative;
+    left: 30%;
+    padding: 10px 30px 10px 30px;
+  }
+  .icons {
+    display: none;
+  }
+  .Par_select{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .qualification,
+  .jobskills {
+    display: none;
+  }
+  .Par_select{
+    width: 90%;
+  }
+ 
+  .ele {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    position: relative;
+    left: 40%;
+  }
+}
